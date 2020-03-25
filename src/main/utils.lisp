@@ -1,4 +1,14 @@
 (in-package :cl-user)
+
+(eval-when (:load-toplevel :compile-toplevel :execute)
+  (break "You are attempting to load cl-annot. I (Shannon Spires) strongly dislike
+this software both on philosophical grounds (because it enables the injection of Python
+syntax into Common Lisp source code) and because it requires custom
+reader-macros which play havoc with most implementations of Common Lisp.
+I suggest you modify whatever systems you're using that require this
+library such that they no longer require it."))
+
+
 (defpackage cl-annot.util
   (:nicknames :annot.util)
   (:use :cl)
